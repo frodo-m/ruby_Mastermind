@@ -1,0 +1,22 @@
+> Define Class `Game`
+> Modules Included: `TextInstructions`, `TextContent`, `Display`
+
+> play Method
++ Display game instructions
++ Receive game mode selection (using `mode_selection` method)
++ If game mode is '1', call `code_maker` method
++ If game mode is '2', call `code_breaker` method
+
+> mode_selection Method
++ Read input from the player
++ If input is '1' or '2', return input
++ Else, display warning message for incorrect answer
++ Recursively call `mode_selection` to prompt for input again
+
+> code_maker Method
++ Initialize a new instance of `ComputerSolver` as `maker`
++ Start `maker` with `computer_start` method
+
+> code_breaker Method
++ Initialize a new instance of `HumanSolver` as `breaker`
++ Start `breaker` with `player_turns` method
