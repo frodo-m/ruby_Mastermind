@@ -43,7 +43,7 @@ module TextInstructions
       The guess had 1 correct number in the right position and 2 correct numbers in the wrong positions
 
        #{formatting('underline', "It's time to play!")}
-       Would you like to be the code #{formatting('blue', 'maker')} or the code #{formatting('yellow', 'breaker')}?
+       Would you like to be the code #{formatting('blue', 'maker')}or the code #{formatting('yellow', 'breaker')}?
 
        Press '1' to be the code #{formatting('blue', 'maker')}
        Press '2' to be the code #{formatting('yellow', 'breaker')}

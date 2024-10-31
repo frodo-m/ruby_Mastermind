@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-puts 'Starting the program...'
-
 require_relative 'lib/game'
 require_relative 'lib/display'
 require_relative 'lib/human_solver'

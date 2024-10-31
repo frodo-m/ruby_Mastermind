@@ -7,7 +7,7 @@ module GameLogic
     temp_guess = guess.clone
     @exact_number = exact_matches(temp_master, temp_guess)
     @same_number = right_numbers(temp_master, temp_guess)
-    @total_numbers = exact_number + same_number
+    @total_number = exact_number + same_number
   end
 
   def exact_matches(master, guess)
@@ -28,8 +28,8 @@ module GameLogic
       next unless guess[index] != '*' && master.include?(guess[index])
 
       same += 1
-      dislocated = master.find_index(guess[index])
-      master[dislocated] = '?'
+      remove = master.find_index(guess[index])
+      master[remove] = '?'
       guess[index] = '?'
     end
     same
@@ -39,8 +39,8 @@ module GameLogic
     master == guess
   end
 
-  def replay?
-    puts game_message('replay_prompt')
+  def repeat_game
+    puts game_message('repeat_prompt')
     replay = gets.chomp
     puts game_message('thanks') if replay.downcase != 'y'
     Game.new.play if replay.downcase == 'y'

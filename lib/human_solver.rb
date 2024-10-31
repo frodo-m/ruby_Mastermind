@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require './game_logic'
-require './display'
-require './text_content'
+require_relative 'game_logic'
+require_relative 'display'
+require_relative 'text_content'
 
 # class for code_breaker game option
 class HumanSolver
@@ -49,7 +49,7 @@ class HumanSolver
     return input if input.match(/^[1-6]{4}$/)
     return input if input.downcase == 'q'
 
-    puts warning_message('turn-error')
+    puts warning_message('turn_error')
     player_input
   end
 
@@ -66,6 +66,6 @@ class HumanSolver
       puts game_message('display_code')
       show_code(master)
     end
-    replay?
+    repeat_game
   end
 end

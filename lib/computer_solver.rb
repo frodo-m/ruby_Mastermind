@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require './display'
-require './game_logic'
-require './text_content'
+require_relative 'display'
+require_relative 'game_logic'
+require_relative 'text_content'
 
 # code_maker option class
 class ComputerSolver
@@ -54,7 +54,7 @@ class ComputerSolver
     sleep(1)
     show_code(guess)
     compare(master, guess)
-    show_clues(exact_matches, same_number)
+    show_clues(exact_number, same_number)
     current_guess = guess.clone
     @found_code_guesses << [current_guess, exact_number, same_number]
   end
@@ -70,18 +70,18 @@ class ComputerSolver
     array.permutation.to_a
   end
 
-  def compare_permutations(code)
-    run_permutations(code[0], code[1], code[2])
-  end
-
   def compare_previous_guesses
     @found_code_guesses.each { |code| compare_permutations(code) }
+  end
+
+  def compare_permutations(code)
+    run_permutations(code[0], code[1], code[2])
   end
 
   def run_permutations(code, exact, same)
     @code_permutations.each do |perm|
       compare(perm, code)
-      reduce_perms(code) unless exact_number == exact && same_number == same
+      reduce_perms(perm) unless exact_number == exact && same_number == same
     end
   end
 
@@ -97,7 +97,7 @@ class ComputerSolver
       @turn_count += 1
       break if solved?(maker_code, @code_permutations[0])
 
-      run_permutations(@code_permutations[0], exact_matches, exact_number)
+      run_permutations(@code_permutations[0], exact_number, same_number)
     end
   end
 
@@ -107,7 +107,7 @@ class ComputerSolver
     else
       puts game_message('computer_lost')
     end
-    replay?
+    repeat_game
   end
 
   def computer_won

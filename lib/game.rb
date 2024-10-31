@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require './display'
-require './text_content'
-require './text_instructions'
+require_relative 'display'
+require_relative 'text_content'
+require_relative 'text_instructions'
 
 # main class that starts the game
 class Game

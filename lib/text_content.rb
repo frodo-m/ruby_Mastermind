@@ -19,7 +19,7 @@ module TextContent
       'human_won' => formatting('green', "  You broke the code! Congratulations, you win! \n\n").to_s,
       'display_code' => "Here is the 'master code' that you were trying to break:",
       'computer_lost' => formatting('green', "\nYou out-smarted the computer!").to_s,
-      'replay_prompt' => formatting('blue', "\n\nDo you want to play again? Press 'y' or any key to quit").to_s,
+      'repeat_prompt' => formatting('blue', "\n\nDo you want to play again? Press 'y' or any key to quit").to_s,
       'thanks' => formatting('green', 'Hope you had fun playing Mastermind!').to_s
     }[message]
   end
