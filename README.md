@@ -4,7 +4,7 @@ This is a classic Mastermind game implementation, where a player competes agains
 
 ## Credits
 
-Special thanks to [rlmorses99](https://github.com/rlmorses99) for their exceptional code that served as the foundation for this project. The efficiency and modularity of their code have been invaluable, providing clear structures and methods that made the development process insightful and enjoyable. Their work taught me a lot about:
+Special thanks to [rlmorses99](https://github.com/rlmorses99) for her exceptional code that served as the foundation for this project. The efficiency and modularity of her code have been invaluable, providing clear structures and methods that made the development process insightful and enjoyable. her work taught me a lot about:
 
 - **Permutations**: Understanding how to generate and manage combinations effectively.
 - **Game Logic**: Implementing rules and mechanics that enhance the gaming experience.

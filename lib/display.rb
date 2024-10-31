@@ -32,4 +32,5 @@ module Display
     same.times { print clue_colors('?') }
     puts ''
   end
+  
 end
